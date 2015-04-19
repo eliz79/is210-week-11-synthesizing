@@ -64,3 +64,19 @@ class ChessPiece(object):
             return tup
         else:
             return False
+
+
+class Rook(ChessPiece):
+    """Docstring.
+    """
+    prefix = 'R'
+
+    def __init__(self, position):
+        """Docstring.
+
+        """
+        ChessPiece.__init__(self, position)
+
+        def is_legal_move(self, position):
+            """Docstring.
+            """         
