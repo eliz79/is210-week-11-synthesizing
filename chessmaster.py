@@ -77,6 +77,16 @@ class Rook(ChessPiece):
         """
         ChessPiece.__init__(self, position)
 
-        def is_legal_move(self, position):
-            """Docstring.
-            """         
+    def is_legal_move(self, position):
+        """Docstring.
+
+        """
+        if ChessPiece.is_legal_move(self, position):
+            if self.position[0] is position[0]:
+                if int(self.position[1]) != int(position[1]):
+                    return True
+            else:
+                if int(self.position[1]) == int(position[1]):
+                    return True
+        else:
+            return False
